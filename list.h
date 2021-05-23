@@ -3,7 +3,7 @@
 
 typedef struct TListItem { // имя структуры - TListItem 
 	void* data; //здесь и ниже набор переменных 
-	void* next;              
+	struct TListItem* next;              
 } TListItem; 
 
 typedef void TFunc(void*); // типу void назначается имя TFunc 
