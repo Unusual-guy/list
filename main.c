@@ -9,26 +9,26 @@ void print(void* value) {// объявляется переменная-указ
 int main(int argc, char** argv) {
 	TListItem* list;
 	TListItem* item;
-	int* data; // объявляется переменная-указатель (data) типа int 
+	double* data; // объявляется переменная-указатель (data) типа int 
 	list = list_create();
 
-	data = (int*)malloc(sizeof(int)); // sizeof(int) – размер одного элемента массива
+	data = (double*)malloc(sizeof(double)); // sizeof(int) – размер одного элемента массива
 	*data = 1;  // 
 	list_append(list, data);
 
-	data = (int*)malloc(sizeof(int));
+	data = (double*)malloc(sizeof(double));
 	*data = 2;
 	list_append(list, data);
 
-	data = (int*)malloc(sizeof(int));
+	data = (double*)malloc(sizeof(double));
 	*data = 3;
 	list_append(list, data);
 
-	data = (int*)malloc(sizeof(int));
+	data = (double*)malloc(sizeof(double));
 	*data = 5;
 	list_append(list, data);
 
-	data = (int*)malloc(sizeof(int));
+	data = (double*)malloc(sizeof(double));
 	*data = 8;
 	list_append(list, data);
 
@@ -44,7 +44,7 @@ int main(int argc, char** argv) {
 	
 	// вставляем в список 7 вместо 5 
 	item = list_search(list, 3);     
-	data = (int*)malloc(sizeof(int));
+	data = (double*)malloc(sizeof(double));
 	*data = 7;
 	list_insert(item, data);
 	list_traverse(list, print); 
